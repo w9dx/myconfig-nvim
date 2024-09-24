@@ -20,5 +20,9 @@ return {
     dap.listeners.before.event_exited["dapui_config"] = function()
       dapui.close({})
     end
+
+    vim.keymap.set("n", "<F7>", function()
+      dapui.toggle()
+    end, { desc = "Toggle nvim-dap-ui" })
   end,
 }
